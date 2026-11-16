@@ -9,6 +9,23 @@ export default function HomePage() {
         text, and check in a data table.
       </p>
 
+      <div className="said">
+        <p className="said-row">
+          <span className="said-when">Before</span>
+          <span className="said-what">&ldquo;Graph of velocity, image.&rdquo;</span>
+        </p>
+        <p className="said-row after">
+          <span className="said-when">With HearGraph</span>
+          <span className="said-what">
+            &ldquo;Time 4 seconds, velocity 0 metres per second, crossing zero.&rdquo;
+          </span>
+        </p>
+      </div>
+      <p className="hint">
+        What a screen reader says for the same worksheet graph. The &ldquo;before&rdquo; line is an illustrative
+        example.
+      </p>
+
       <div className="big-buttons">
         <a className="big-button" href="/teacher/">
           <span className="big-button-title">I&rsquo;m a teacher: make an accessible graph</span>
