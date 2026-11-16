@@ -13,7 +13,8 @@ This file records exactly what was tested, with what, when, and what failed. Non
 - **Size:** first-load JavaScript is 171.8 to 186.7 KB gzipped depending on the page (target was under 200 KB). CSS is 2.6 KB gzipped.
 - **Lighthouse 13.6.0** (one run, before the bug fixes, local server): student page accessibility 100, best practices 100, performance 76; teacher page 100 / 100 / 98.
 - **Manual screen-reader pass by the builder:** not done yet. See "Manual passes by Dylan" below.
-- **Not tested:** blind or low-vision users, real screen-reader speech, audible sound quality, real phones, Firefox and Safari (automated), braille displays, embossers, forced-colours mode, real printing, the deployed URL.
+- **Live site (https://heargraph.vercel.app):** 123 of 178 checks passed before the host's traffic protection began blocking the test machine; the other 55 are unverified there. A real-browser spot check of the student flow passed. Offline install failed on the live site during that block, was reworked, and is not yet re-verified there.
+- **Not tested:** blind or low-vision users, real screen-reader speech, audible sound quality, real phones, Firefox and Safari (automated), braille displays, embossers, forced-colours mode, real printing.
 
 ## Log
 
@@ -57,7 +58,15 @@ _Not done yet. Run `docs/SCREEN_READER_CHECKLIST.md` on the live URL and paste t
 
 ## Checks against the deployed site
 
-_Not done yet. After deployment: `BASE_URL=<LIVE_URL> npm run e2e`, then record the date and result here._
+Live URL: https://heargraph.vercel.app (deployed 2026-11-15 from commit 6dc1260).
+
+| Date | Tool | Task | Result | Issues | Fixed? |
+|---|---|---|---|---|---|
+| 2026-11-15 | Playwright 1.65.1 + axe-core 4.14.0, Chromium 159,  | Full suite (178 checks) against the live site | **123 passed, 55 did not.** Partway through the run, Vercel's automatic traffic protection started answering this machine with a "Security Checkpoint" page (HTTP 403, ). Every failure inspected was that 403, not an app error | The test burst looked like an attack to the host. The 55 checks are **unverified on the live site**; they pass against the same build served locally. The project has no attack mode or custom firewall turned on, so ordinary visitors are not affected | Not re-run. Re-running in a burst would trigger the same protection |
+| 2026-11-15 | Built-in browser pane (AI agent), real Chromium | Open the live student example, press Right then Z in the graph | Page title "Cart on a track: velocity vs time | HearGraph"; readout "Time 4 seconds, velocity 0 metres per second, crossing zero. Point 5 of 9." | None | n/a |
+| 2026-11-15 | Same | Offline install on the live site | **Failed.** The service worker stayed in "installing" with 0 files saved while this machine was being challenged | The installer waited without a time limit on requests the host was holding or refusing | Installer rewritten: 15-second limit per file, six files at a time, refused files skipped and saved on first use. Passes locally. **Not yet re-verified on the live site** |
+
+Offline use on the live site is therefore unverified at the time of writing. Check it by hand: open the site, wait for the footer line "Saved on this device…", turn off Wi-Fi, and reload.
 
 ## How to repeat
 

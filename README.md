@@ -4,9 +4,9 @@
 
 A teacher pastes the numbers behind a graph and gets a link. A student who is blind or has low vision opens the link and explores the graph by keyboard, sound, plain-language description and data table, then answers practice questions with explained feedback.
 
-- **Live demo:** <LIVE_URL> (no login, no personal information needed)
-- **Student example:** <LIVE_URL>/student/?sample=cart
-- **Source:** <REPO_URL>
+- **Live demo:** https://heargraph.vercel.app (no login, no personal information needed)
+- **Student example:** https://heargraph.vercel.app/student/?sample=cart
+- **Source:** https://github.com/DylanRolfe/heargraph
 - Built for [AccessED Hacks](https://accessed-hacks.devpost.com/) (Oct 17 to Nov 20, 2026) by Dylan Rolfe, solo.
 
 ## Who it is for
@@ -58,7 +58,7 @@ npm start          # serve ./out at http://localhost:4173
 npm run e2e        # Playwright + axe-core tests against ./out (run `npx playwright install chromium` once)
 ```
 
-To run the end-to-end tests against the deployed site: `BASE_URL=<LIVE_URL> npm run e2e`.
+To run the end-to-end tests against the deployed site: `BASE_URL=https://heargraph.vercel.app npm run e2e`.
 
 The offline service worker is only registered in the production build (`npm run build` then `npm start`), not in `npm run dev`.
 

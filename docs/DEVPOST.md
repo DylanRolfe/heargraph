@@ -1,6 +1,6 @@
 # Devpost submission text (paste-ready)
 
-Replace `<LIVE_URL>`, `<REPO_URL>` and `<VIDEO_URL>` before pasting. Anything in [square brackets] is for Dylan to complete truthfully or delete.
+Replace `<VIDEO_URL>` before pasting. Anything in [square brackets] is for Dylan to complete truthfully or delete.
 
 ---
 
@@ -18,9 +18,9 @@ Dylan Rolfe (solo). First-year Mechatronics Engineering student, University of W
 
 ## Links
 
-- Working demo: <LIVE_URL>
-- Student example (start here): <LIVE_URL>/student/?sample=cart
-- Source code: <REPO_URL>
+- Working demo: https://heargraph.vercel.app
+- Student example (start here): https://heargraph.vercel.app/student/?sample=cart
+- Source code: https://github.com/DylanRolfe/heargraph
 - Video (captioned, with transcript): <VIDEO_URL>
 
 ---
@@ -108,7 +108,7 @@ What was designed in:
 - Nothing by colour alone (two lines differ by marker shape and dash) and nothing by sound alone (every tick has a text label).
 - High contrast, large text and reduced motion settings; the layout reflows at 320 px.
 - Plain language, no timer, no score, and feedback that explains instead of judging.
-- Low bandwidth: first-load JavaScript is 172 to 187 KB gzipped depending on the page (measured), and the app works offline after the first visit.
+- Low bandwidth: first-load JavaScript is 172 to 187 KB gzipped depending on the page (measured). A service worker saves the app for offline use after the first visit [confirm on the live site before submitting; see docs/TESTING.md].
 
 What was actually tested (full log in `docs/TESTING.md`):
 
@@ -173,6 +173,6 @@ All code and documentation were written during the event window (Oct 17 to Nov 2
 
 ## Setup instructions (for judges)
 
-Nothing to install. Open <LIVE_URL> in any modern browser. No login, and no personal information is asked for.
+Nothing to install. Open https://heargraph.vercel.app in any modern browser. No login, and no personal information is asked for.
 
 To run it locally: Node.js 20+, then `npm install`, `npm run build`, `npm start`, and open http://localhost:4173.

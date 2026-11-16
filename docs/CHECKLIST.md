@@ -14,12 +14,12 @@ Each Devpost requirement, where it is satisfied, and its status. "Dylan" in the 
 | 8 | Challenges | `docs/DEVPOST.md`, "Challenges" | Ready; one bracketed line for Dylan to add or delete |
 | 9 | What you learned | `docs/DEVPOST.md`, "What we learned" | Ready; one bracketed line for Dylan to add or delete |
 | 10 | One concrete before-and-after example | `docs/DEVPOST.md`, "One before-and-after example" (cart worksheet, exact keys and announcements; learner marked as illustrative) | Ready to paste |
-| 11 | Working demo link | Live Vercel URL, in `README.md` and `docs/DEVPOST.md` "Links" | **Dylan:** create the GitHub repo and import it into Vercel, then replace `<LIVE_URL>` |
+| 11 | Working demo link | Live Vercel URL, in `README.md` and `docs/DEVPOST.md` "Links" | Done: https://heargraph.vercel.app |
 | 12 | Setup instructions | `README.md`, "Setup"; `docs/DEVPOST.md`, "Setup instructions (for judges)" | Ready |
 | 13 | Limitations | `README.md`, "Limitations"; `docs/DEVPOST.md`, "Limitations"; in the app at `/about/` and on the home page | Ready |
 | 14 | Screenshots | `docs/SHOTLIST.md` lists 10 shots with captions | **Dylan:** take them on the live site and upload |
 | 15 | Video (optional, 2 to 3 min) with captions or transcript | `docs/VIDEO_SCRIPT.md`, `docs/captions.srt`, `docs/TRANSCRIPT.md` | **Dylan:** record, upload with captions, replace `<VIDEO_URL>` |
-| 16 | Source link | Public GitHub repository, MIT licence (`LICENSE`) | **Dylan:** create the repo and push, then replace `<REPO_URL>` |
+| 16 | Source link | Public GitHub repository, MIT licence (`LICENSE`) | Done: https://github.com/DylanRolfe/heargraph |
 | 17 | Disclosure: libraries | `README.md`, "Credits"; `docs/SOURCES.md` section 4 | Ready |
 | 18 | Disclosure: datasets | None used. Stated in `docs/DEVPOST.md`, "Credits and AI disclosure" | Ready |
 | 19 | Disclosure: assets | None from other sources (icon and sounds are made in this project). Stated in `docs/DEVPOST.md` and `README.md` | Ready |
@@ -34,7 +34,7 @@ Each Devpost requirement, where it is satisfied, and its status. "Dylan" in the 
 
 ## Remaining human steps, in order
 
-1. **Now or any time (about 5 minutes):** create the public GitHub repo `heargraph`, push this folder, import the repo into Vercel. Tell the agent the live URL so it can fill in `<LIVE_URL>` and `<REPO_URL>` and run the QA suite against the live site.
+1. **Done by the agent on Nov 15:** public repo created and pushed, Vercel project created and deployed.
 2. **Thu Nov 19 evening (15 minutes):** run `docs/SCREEN_READER_CHECKLIST.md` on the live URL and give the results to the agent (or paste them into `docs/TESTING.md`).
 3. **Fri Nov 20 morning (30 minutes, recommended):** record the video from `docs/VIDEO_SCRIPT.md`, upload it with `docs/captions.srt`, paste `docs/TRANSCRIPT.md` into the description.
 4. **Fri Nov 20 by 4:00 PM Eastern:** take the screenshots in `docs/SHOTLIST.md`, paste `docs/DEVPOST.md` into Devpost, add the links and video, and submit. Keep the Vercel deployment live through at least Nov 23.
