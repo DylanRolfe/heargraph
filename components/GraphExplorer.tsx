@@ -142,7 +142,7 @@ export function GraphExplorer({ worksheet }: { worksheet: Worksheet }) {
       return;
     }
     if (!settings.audio) {
-      say('Sound is off. Use the Sound button below the graph, or the Settings page, to turn it on.');
+      say('Sound is off. Use the Turn sound on button below the graph, or the Settings page, to turn it on.');
       return;
     }
     if (!audioSupported()) {
@@ -297,13 +297,12 @@ export function GraphExplorer({ worksheet }: { worksheet: Worksheet }) {
         ) : null}
         <button
           type="button"
-          aria-pressed={settings.audio}
           onClick={() => {
             if (settings.audio) stopSweep();
             update({ audio: !settings.audio });
           }}
         >
-          Sound
+          {settings.audio ? 'Turn sound off' : 'Turn sound on'}
         </button>
       </div>
       <p className="hint">

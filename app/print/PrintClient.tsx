@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { DataTable } from '@/components/DataTable';
 import { GraphSvg } from '@/components/GraphSvg';
+import { useDocumentTitle } from '@/components/useDocumentTitle';
 import { useWorksheetFromLocation } from '@/components/useWorksheet';
 import { describeWorksheet } from '@/lib/describe';
 
@@ -20,16 +21,14 @@ text{font-family:Arial,Helvetica,sans-serif;font-size:16px;fill:#000}
 export function PrintClient() {
   const loaded = useWorksheetFromLocation();
   const holder = useRef<HTMLDivElement>(null);
+  useDocumentTitle(loaded.status === 'ok' ? `Printable: ${loaded.worksheet.title} | HearGraph` : null);
 
-  useEffect(() => {
-    if (loaded.status === 'ok') document.title = `Printable: ${loaded.worksheet.title} | HearGraph`;
-  }, [loaded]);
 
   if (loaded.status === 'loading') {
     return (
       <>
         <h1>Printable version</h1>
-        <p>Loading the graph…</p>
+        <p className="loading">Loading the graph…</p>
       </>
     );
   }

@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:06,500
+This is HearGraph, my solo entry for AccessED Hacks. I'm Dylan Rolfe.
+
+2
+00:00:07,000 --> 00:00:12,500
+The barrier. A student who is blind or has low vision
+gets a physics worksheet.
+
+3
+00:00:12,500 --> 00:00:18,500
+The graph is a picture. A screen reader just says:
+"graph of velocity, image."
+
+4
+00:00:18,500 --> 00:00:25,500
+The student can't read a value or find where the line
+crosses zero without someone's help.
+
+5
+00:00:26,000 --> 00:00:33,500
+The change. The teacher usually has the numbers behind the graph.
+In HearGraph, they paste them in.
+
+6
+00:00:34,000 --> 00:00:41,000
+A title, a small table, and Create link.
+
+7
+00:00:41,000 --> 00:00:49,500
+The data is stored inside the link itself.
+No account, no upload, nothing saved on a server.
+
+8
+00:00:50,000 --> 00:00:53,500
+The student opens the link.
+
+9
+00:00:54,000 --> 00:01:04,500
+First, a short description in plain language: where the line starts,
+how it changes, and where it reaches zero.
+
+10
+00:01:05,000 --> 00:01:12,000
+Then the graph itself. One Tab stop.
+
+11
+00:01:12,000 --> 00:01:21,500
+The arrow keys move point by point,
+and every point is announced with its units.
+
+12
+00:01:22,000 --> 00:01:28,000
+The question was: when does the cart stop?
+Press Z to jump to the zero crossing.
+
+13
+00:01:28,000 --> 00:01:34,500
+[Screen reader] "Time 4 seconds, velocity 0 metres per second,
+crossing zero."
+
+14
+00:01:35,000 --> 00:01:41,000
+Space plays the whole graph as sound. Pitch follows the value.
+
+15
+00:01:41,000 --> 00:01:49,500
+[Tones fall in pitch. A click marks zero.
+Two low ticks mark the lowest value.]
+
+16
+00:01:50,000 --> 00:01:56,000
+The same numbers are in a real data table.
+
+17
+00:01:56,000 --> 00:02:04,500
+Then practice questions, with no timer,
+and feedback that explains the answer.
+
+18
+00:02:05,000 --> 00:02:12,000
+For low vision there's high contrast, large text,
+and a ringed, labelled focus point.
+
+19
+00:02:12,000 --> 00:02:17,500
+After the first visit it works offline.
+
+20
+00:02:18,000 --> 00:02:24,000
+What it doesn't do. The teacher has to supply the numbers.
+It can't read a picture.
+
+21
+00:02:24,000 --> 00:02:30,000
+Sound is an extra, not a replacement for tactile graphics
+or a specialist teacher.
+
+22
+00:02:30,000 --> 00:02:37,500
+I tested it myself with automated checks and a screen reader.
+It has not been tested with blind or low-vision students.
+
+23
+00:02:38,000 --> 00:02:45,500
+I built it during the event with an AI coding agent.
+Details and credits are in the README. Thanks for watching.

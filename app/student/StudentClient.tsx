@@ -1,22 +1,20 @@
 'use client';
 
-import { useEffect } from 'react';
 import { WorksheetView } from '@/components/WorksheetView';
+import { useDocumentTitle } from '@/components/useDocumentTitle';
 import { useWorksheetFromLocation } from '@/components/useWorksheet';
 import { samples } from '@/lib/samples';
 
 export function StudentClient() {
   const loaded = useWorksheetFromLocation();
+  useDocumentTitle(loaded.status === 'ok' ? `${loaded.worksheet.title} | HearGraph` : null);
 
-  useEffect(() => {
-    if (loaded.status === 'ok') document.title = `${loaded.worksheet.title} | HearGraph`;
-  }, [loaded]);
 
   if (loaded.status === 'loading') {
     return (
       <>
         <h1>Student view</h1>
-        <p>Loading the graph…</p>
+        <p className="loading">Loading the graph…</p>
         <noscript>
           <p>HearGraph needs JavaScript to read the graph data from the link.</p>
         </noscript>

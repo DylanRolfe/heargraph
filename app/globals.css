@@ -338,14 +338,6 @@ button[disabled] {
   cursor: not-allowed;
 }
 
-button[aria-pressed]::after {
-  content: ': off';
-}
-
-button[aria-pressed='true']::after {
-  content: ': on';
-}
-
 .button-row {
   display: flex;
   flex-wrap: wrap;
@@ -598,6 +590,7 @@ legend {
 }
 
 .table-scroll {
+  position: relative;
   overflow-x: auto;
   margin: 0 0 1rem;
 }
@@ -801,4 +794,8 @@ legend {
   .readout {
     font-size: 1.15rem;
   }
+}
+
+.loading {
+  min-height: 150vh;
 }
