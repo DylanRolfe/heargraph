@@ -114,7 +114,7 @@ export function SettingsForm() {
             checked={settings.highContrast}
             onChange={(e) => update({ highContrast: e.target.checked })}
           />
-          <label htmlFor="set-contrast">High contrast (white and yellow on black)</label>
+          <label htmlFor="set-contrast">High contrast (white on black)</label>
         </div>
         <div className="choice">
           <input

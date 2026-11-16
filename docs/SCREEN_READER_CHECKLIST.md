@@ -63,7 +63,7 @@ NVDA basics: `Ctrl` stops speech. `NVDA+Space` switches between browse mode and 
 
 | # | Do this | Expected |
 |---|---|---|
-| E1 | Settings: turn on "High contrast" and "Large text". Open the student example. | Black background, yellow line, larger text. Focus outlines are easy to see. Nothing overlaps or is cut off. |
+| E1 | Settings: turn on "High contrast" and "Large text". Open the student example. | Black background, light orange line, larger text. Focus outlines are easy to see. Nothing overlaps or is cut off. |
 | E2 | Browser zoom to 200 percent (`Ctrl` and `+`). | No sideways scrolling of the page. The graph is still readable. |
 | E3 | Windows Magnifier (`Win` and `+`) at 200 percent, move through the graph with the arrow keys. | The ringed point and its value label are easy to find. (If the magnifier does not follow the point, write that down.) |
 

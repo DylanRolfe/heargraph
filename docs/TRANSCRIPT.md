@@ -44,7 +44,7 @@ Space plays the whole graph as sound. Pitch follows the value. A click marks zer
 
 The same numbers are in a real data table. Then practice questions, with no timer, and feedback that explains the answer.
 
-[The Settings page. High contrast and Large text are turned on. The student page now shows yellow and white on black with larger text.]
+[The Settings page. High contrast and Large text are turned on. The student page now shows white and light orange on black with larger text.]
 
 For low vision there's high contrast, large text, and a ringed, labelled focus point. After the first visit it works offline.
 
