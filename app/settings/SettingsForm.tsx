@@ -135,7 +135,8 @@ export function SettingsForm() {
           <label htmlFor="set-motion">Reduce motion (no smooth scrolling or animated highlights)</label>
         </div>
         <p className="hint">
-          HearGraph also follows your device&rsquo;s own reduced-motion and forced-colours settings.
+          On a first visit HearGraph follows your device&rsquo;s own increased-contrast, reduced-motion and
+          forced-colours settings.
         </p>
       </fieldset>
 

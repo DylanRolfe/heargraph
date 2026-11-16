@@ -61,12 +61,28 @@ export function sanitizeSettings(raw: unknown): Settings {
   return out;
 }
 
+/** Defaults for a first visit: follow the device's own contrast and motion preferences. */
+export function deviceDefaults(): Settings {
+  const prefers = (query: string): boolean => {
+    try {
+      return typeof window !== 'undefined' && window.matchMedia(query).matches;
+    } catch {
+      return false;
+    }
+  };
+  return {
+    ...DEFAULT_SETTINGS,
+    highContrast: prefers('(prefers-contrast: more)'),
+    reducedMotion: prefers('(prefers-reduced-motion: reduce)'),
+  };
+}
+
 export function loadSettings(): Settings {
   try {
     const text = window.localStorage.getItem(STORAGE_KEY);
-    return text ? sanitizeSettings(JSON.parse(text)) : { ...DEFAULT_SETTINGS };
+    return text ? sanitizeSettings(JSON.parse(text)) : deviceDefaults();
   } catch {
-    return { ...DEFAULT_SETTINGS };
+    return deviceDefaults();
   }
 }
 
@@ -89,4 +105,4 @@ export function applySettingsToDocument(s: Settings): void {
  * Inline script run before first paint so the saved theme is applied without a flash.
  * Kept tiny and defensive; it must never throw.
  */
-export const SETTINGS_BOOT_SCRIPT = `try{var s=JSON.parse(localStorage.getItem('${STORAGE_KEY}')||'{}'),d=document.documentElement;d.dataset.contrast=s.highContrast===true?'high':'normal';d.dataset.text=s.largeText===true?'large':'normal';d.dataset.motion=s.reducedMotion===true?'reduced':'normal'}catch(e){}`;
+export const SETTINGS_BOOT_SCRIPT = `try{var t=localStorage.getItem('${STORAGE_KEY}'),s=t?JSON.parse(t):{},d=document.documentElement,m=function(q){return !t&&window.matchMedia(q).matches};d.dataset.contrast=s.highContrast===true||m('(prefers-contrast: more)')?'high':'normal';d.dataset.text=s.largeText===true?'large':'normal';d.dataset.motion=s.reducedMotion===true||m('(prefers-reduced-motion: reduce)')?'reduced':'normal'}catch(e){}`;

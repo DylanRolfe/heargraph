@@ -16,6 +16,9 @@
   --accent-text: #fdfefb;
   --link: #1a3a8f;
   --focus: #a3005a;
+  --good: #0a5a2a;
+  --retry: #7a3b00;
+  --error: #9b1010;
   --line-0: #1a3a8f;
   --line-1: #8a2a00;
   --grid: #b5d0af;
@@ -41,6 +44,9 @@
   --accent-text: #000000;
   --link: #ffe600;
   --focus: #00e5ff;
+  --good: #7dff9b;
+  --retry: #ffd27d;
+  --error: #ff9c9c;
   --line-0: #ffe600;
   --line-1: #7de3ff;
   --grid: #6b6b6b;
@@ -50,6 +56,28 @@
   --readout-text: #ffffff;
   --th-bg: #000000;
   --th-text: #ffffff;
+}
+
+/* Browser-drawn parts follow the palette too. */
+:root {
+  color-scheme: light;
+  accent-color: var(--accent);
+  caret-color: var(--text);
+  scrollbar-color: var(--border) var(--surface);
+}
+
+:root[data-contrast='high'] {
+  color-scheme: dark;
+}
+
+::selection {
+  background: var(--readout-bg);
+  color: var(--readout-text);
+}
+
+:root[data-contrast='high'] ::selection {
+  background: var(--accent);
+  color: var(--accent-text);
 }
 
 body {
@@ -165,14 +193,39 @@ h3 {
   letter-spacing: 0.01em;
 }
 
-.lead {
-  font-size: 1.25rem;
-  max-width: 38rem;
+h1,
+h2,
+h3 {
+  text-wrap: balance;
 }
 
+.lead {
+  font-size: 1.25rem;
+  max-width: 36rem;
+}
+
+/* About 70 characters per line. */
 p,
 li {
-  max-width: 44rem;
+  max-width: 40rem;
+  text-wrap: pretty;
+}
+
+/* Text links and controls answer the pointer. */
+a:hover {
+  text-decoration-thickness: 3px;
+}
+
+button:active,
+.button-link:active,
+.big-button:active {
+  transform: translateY(1px);
+}
+
+input[type='text']:hover,
+textarea:hover,
+select:hover {
+  border-color: var(--text);
 }
 
 /* Landing: what a screen reader says, before and after. */
@@ -307,7 +360,6 @@ kbd {
   background: var(--readout-bg);
   color: var(--readout-text);
   border: 2px solid var(--text);
-  border-left: 0.6rem solid var(--text);
   font-size: 1.4rem;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
@@ -317,7 +369,7 @@ kbd {
 
 :root[data-contrast='high'] .readout {
   border: 2px solid var(--border);
-  border-left: 0.6rem solid var(--active);
+  color: var(--accent);
 }
 
 .data-table {
@@ -338,24 +390,36 @@ kbd {
   background: var(--surface);
 }
 
-/* Questions: a ruled margin instead of a box. */
+/* Questions: ruled lines between them instead of boxes. */
 .question {
   border: 0;
-  border-left: 0.4rem solid var(--text);
-  padding: 0.25rem 0 0.25rem 1.1rem;
-  margin-bottom: 1.75rem;
+  border-radius: 0;
+  padding: 0 0 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.question + .question {
+  border-top: 1.5px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+/* A question reads the same whether it is a text field or a group of choices. */
+.question legend {
+  font-family: inherit;
 }
 
 .context {
-  border-left-color: var(--text);
+  border-left: 0;
   background: var(--surface);
   padding: 0.6rem 0.9rem;
 }
 
-.page-nav ul {
-  border-top: 1.5px solid var(--border);
-  border-bottom: 1.5px solid var(--border);
-  padding: 0.3rem 0;
+.readout {
+  max-width: none;
+}
+
+.table-scroll {
+  scrollbar-width: thin;
 }
 
 @media (max-width: 30rem) {

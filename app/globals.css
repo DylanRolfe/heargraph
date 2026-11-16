@@ -1,40 +1,4 @@
-:root {
-  --bg: #ffffff;
-  --surface: #f3f5f8;
-  --text: #16181d;
-  --muted: #474d57;
-  --border: #5b6270;
-  --accent: #0b3d91;
-  --accent-text: #ffffff;
-  --focus: #b3005e;
-  --good: #0a5a2a;
-  --retry: #7a3b00;
-  --error: #9b1010;
-  --line-0: #0b3d91;
-  --line-1: #8a2a00;
-  --grid: #c3c8d0;
-  --active: #b3005e;
-  --plot-bg: #ffffff;
-}
-
-:root[data-contrast='high'] {
-  --bg: #000000;
-  --surface: #000000;
-  --text: #ffffff;
-  --muted: #ffffff;
-  --border: #ffffff;
-  --accent: #ffe600;
-  --accent-text: #000000;
-  --focus: #00e5ff;
-  --good: #7dff9b;
-  --retry: #ffd27d;
-  --error: #ff9c9c;
-  --line-0: #ffe600;
-  --line-1: #7de3ff;
-  --grid: #6b6b6b;
-  --active: #ff7bd5;
-  --plot-bg: #000000;
-}
+/* Colour and type tokens live in theme.css. */
 
 :root[data-text='large'] {
   font-size: 125%;
@@ -128,10 +92,6 @@ li {
 a {
   color: var(--accent);
   text-underline-offset: 0.15em;
-}
-
-:root[data-contrast='high'] a {
-  color: var(--accent);
 }
 
 code,
@@ -402,8 +362,8 @@ legend {
 }
 
 .choice input {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
   margin: 0.2rem 0 0;
   flex: none;
   accent-color: var(--accent);
