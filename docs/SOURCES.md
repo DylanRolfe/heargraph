@@ -261,6 +261,8 @@ Notes:
 - The axe-core README says automated tools find "on average 57% of WCAG issues automatically". So passing axe checks does not prove the app is accessible. Manual screen reader testing is still needed, and the project should say so.
 - The official home pages (nextjs.org, react.dev, typescriptlang.org, vitest.dev, playwright.dev) were taken from each repository page. The home pages themselves were not opened separately.
 
+- **Geist Sans** (typeface, added 2026-11-16). By Vercel in collaboration with basement.studio. Installed from the `geist` npm package, version 1.9.2. The LICENSE file inside the installed package says it is licensed under the SIL Open Font License, Version 1.1 (read locally by the AI agent; the project web page was not opened).
+
 ---
 
 ## 5. Could not verify

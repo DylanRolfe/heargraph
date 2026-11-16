@@ -9,17 +9,17 @@ export default function HomePage() {
         text, and check in a data table.
       </p>
 
-      <div className="said">
-        <p className="said-row">
-          <span className="said-when">Before</span>
-          <span className="said-what">&ldquo;Graph of velocity, image.&rdquo;</span>
-        </p>
-        <p className="said-row after">
-          <span className="said-when">With HearGraph</span>
-          <span className="said-what">
+      <div className="compare">
+        <div className="compare-card muted">
+          <p className="compare-label">Before</p>
+          <p className="compare-quote">&ldquo;Graph of velocity, image.&rdquo;</p>
+        </div>
+        <div className="compare-card">
+          <p className="compare-label">With HearGraph</p>
+          <p className="compare-quote">
             &ldquo;Time 4 seconds, velocity 0 metres per second, crossing zero.&rdquo;
-          </span>
-        </p>
+          </p>
+        </div>
       </div>
       <p className="hint">
         What a screen reader says for the same worksheet graph. The &ldquo;before&rdquo; line is an illustrative

@@ -287,7 +287,7 @@ export function GraphExplorer({ worksheet }: { worksheet: Worksheet }) {
         <button type="button" onClick={() => move(1)}>
           Next point
         </button>
-        <button type="button" onClick={toggleSweep}>
+        <button type="button" className="primary" onClick={toggleSweep}>
           {playing ? 'Stop sound' : 'Play graph as sound'}
         </button>
         {seriesCount > 1 ? (

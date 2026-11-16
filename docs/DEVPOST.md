@@ -163,7 +163,7 @@ These are more capable than HearGraph. HearGraph is narrower: a pasted table bec
 ## Credits and AI disclosure
 
 - **Libraries:** Next.js, React, TypeScript; Vitest, Playwright and axe-core for testing. Web Audio API for sound.
-- **Datasets and assets:** none. The three sample worksheets use synthetic numbers written for this project. No fonts, images or audio files from other sources.
+- **Datasets and assets:** none. The three sample worksheets use synthetic numbers written for this project. No images or audio files from other sources. One typeface from another source: Geist Sans (Vercel with basement.studio, SIL Open Font License 1.1), self-hosted.
 - **Research and standards:** listed with links in `docs/SOURCES.md`.
 - **AI assistance:** HearGraph was built by Dylan with an AI coding agent (Claude Fable 5.2 in Claude Code) and sub-agents. Dylan decided the learner, barrier, product definition, scope, stack, honesty rules and schedule. The AI agent wrote the code, the tests and the first drafts of this text, and researched prior art. Dylan [reviewed … / ran the manual screen-reader checklist on … / recorded the video — complete truthfully from docs/TESTING.md].
 

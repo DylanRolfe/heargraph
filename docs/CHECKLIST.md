@@ -22,7 +22,7 @@ Each Devpost requirement, where it is satisfied, and its status. "Dylan" in the 
 | 16 | Source link | Public GitHub repository, MIT licence (`LICENSE`) | Done: https://github.com/DylanRolfe/heargraph |
 | 17 | Disclosure: libraries | `README.md`, "Credits"; `docs/SOURCES.md` section 4 | Ready |
 | 18 | Disclosure: datasets | None used. Stated in `docs/DEVPOST.md`, "Credits and AI disclosure" | Ready |
-| 19 | Disclosure: assets | None from other sources (icon and sounds are made in this project). Stated in `docs/DEVPOST.md` and `README.md` | Ready |
+| 19 | Disclosure: assets | One: the Geist Sans typeface (SIL Open Font License 1.1), self-hosted. The icon and sounds are made in this project. Stated in `docs/DEVPOST.md` and `README.md` | Ready |
 | 20 | Disclosure: AI assistance | `README.md`, "AI assistance disclosure"; `docs/DEVPOST.md`, "Credits and AI disclosure" | Ready; **Dylan:** complete the bracketed "Dylan reviewed and tested" line truthfully |
 | 21 | Disclosure: pre-existing work | None. `docs/DEVPOST.md`, "Event contribution statement"; `README.md`, "Event contribution" | Ready |
 | 22 | Synthetic or permission-cleared examples only | All three samples are marked synthetic in `lib/samples.ts` and on screen ("Synthetic data, made up for this example.") | Done |

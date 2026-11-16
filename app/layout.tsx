@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { GeistSans } from 'geist/font/sans';
 import './globals.css';
 import './theme.css';
 import { JumpLink } from '@/components/JumpLink';
@@ -16,12 +17,12 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#14213d',
+  themeColor: '#fafafa',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-contrast="normal" data-text="normal" data-motion="normal" suppressHydrationWarning>
+    <html lang="en" className={GeistSans.variable} data-contrast="normal" data-text="normal" data-motion="normal" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: SETTINGS_BOOT_SCRIPT }} />
       </head>

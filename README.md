@@ -99,7 +99,8 @@ HearGraph is narrower: a teacher pastes a small table, shares a link with no acc
 
 ## Credits
 
-- Libraries: Next.js, React, TypeScript (runtime); Vitest, Playwright, axe-core (testing). No other runtime dependencies, no fonts, no images, no datasets.
+- Libraries: Next.js, React, TypeScript (runtime); Vitest, Playwright, axe-core (testing). No other runtime dependencies, no images, no datasets.
+- Typeface: Geist Sans by Vercel with basement.studio, SIL Open Font License 1.1, self-hosted from the `geist` npm package (about 69 KB, one file).
 - Sound: generated in the browser with the Web Audio API. No audio files.
 - Sample worksheets: synthetic numbers written for this project.
 - Standards and research consulted: [`docs/SOURCES.md`](docs/SOURCES.md).
