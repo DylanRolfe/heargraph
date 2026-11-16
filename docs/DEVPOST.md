@@ -108,7 +108,7 @@ What was designed in:
 - Nothing by colour alone (two lines differ by marker shape and dash) and nothing by sound alone (every tick has a text label).
 - High contrast, large text and reduced motion settings; the layout reflows at 320 px.
 - Plain language, no timer, no score, and feedback that explains instead of judging.
-- Low bandwidth: [paste the measured first-load size from docs/TESTING.md], and offline after the first visit.
+- Low bandwidth: first-load JavaScript is 172 to 187 KB gzipped depending on the page (measured), and the app works offline after the first visit.
 
 What was actually tested (full log in `docs/TESTING.md`):
 
